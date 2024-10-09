@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.menu-item:hover {
+    color: #346038;
+}
+.name {
+    display: flex;
+    gap: 10px;
+}
+.site-name {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: calc(100vh - 70px);
+    padding: 20px;
+    position: relative;
+}
+.content {
+    display: flex; /* Usando flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    padding: 20px; /* Adiciona algum espaço interno */
+}
+
+.text-container {
+    text-align: center; /* Centraliza o texto */
+    border-radius: 15px; /* Arredonda os cantos */
+    padding: 40px; /* Adiciona espaço interno */
+    max-width: 600px; /* Define uma largura máxima */
+    width: 100%; /* Permite que a div ocupe 100% da largura disponível */
+    font-family: Inria Serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #391c14;
+}
+.text-container h1{
+    font-weight: 300;
+    font-size: 4.5rem;
+    
+}
+.text-container h2{
+    font-weight: 300;
+    font-size: 4.5rem;
+    text-decoration:underline;
+}
+.text-container p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #391c14;
+    font-family: Asap;
+}
+.btn-start {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #346038;
+    color: #cab47c;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    font-size: 20px;
+    width: auto; /* Define a largura automática */
+}
+.btn-start:hover {
+    background-color: #27442f;
+}
+.foto-mulher {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.imagem {
+    max-width: 300px;
+    height: auto;
+}
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.footer-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.search-box {
+    border-radius: 40px;
+    background-color: #cab47c;  
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-txt {
+    background: none;
+    border: none;
+    outline: none;
+    color: #346038;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+}
+.search-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #cab47c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box:hover > .search-txt {
+    width: 240px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu {
+        margin-top: 10px;
+    }
+    .text-container h2 {
+        font-size: 2.5rem;
+    }
+    .text-container p {
+        font-size: 0.9rem;
+    }
+    .btn-start {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .foto-mulher {
+        right: 10px;
+        max-width: 80%;
+    }
+}

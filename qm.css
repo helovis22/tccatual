@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+}
+.menu {
+    display: flex;
+    gap: 0px;
+    margin-left: 1000px;
+}
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.menu-item:hover {
+    color: #346038;
+}
+.name{
+    display: flex;
+    gap: 0px;
+}
+.site-name{
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+.search-box {
+    border-radius: 40px;
+    background-color: #cab47c;  
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-txt {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: #346038;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+}
+.search-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #cab47c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+}
+.info-box {
+    background-color: #346038;
+    padding: 7 0px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 800px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.info-box h1 {
+    font-size: 30px;
+    font-weight: 10px;
+    color: #cab47c;
+    margin-bottom: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+    padding-top: 40px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Inria Serif;
+}
+.info-box p {
+    font-size: 20px;
+    font-weight: 10px;
+    color: #cab47c;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 30px;
+    font-family: Rosarivo;
+}
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    top: 500px;
+    width: 100%;
+}
+.footer-content p {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 0;
+}

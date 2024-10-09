@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor Selecionada</title>
+    <link rel="stylesheet" href="pg5.css"> <!-- Vincula o arquivo CSS -->
+</head>
+<body>
+    <header>
+        <div class="name">
+            <a href="index.html" class="site-name">Oblivion</a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="menu-item">Início</a>
+        </div>
+    </header>
+
+    <div class="selected-tone">
+        <h2>Tom de Pele Selecionado:</h2>
+        <div id="tone-display" class="tone-display"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Oblivion-Contato</p>
+            <p>e-mail: oblivion@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        const selectedTone = localStorage.getItem('selectedTone');
+        const toneDisplay = document.getElementById('tone-display');
+
+        if (selectedTone) {
+            toneDisplay.textContent = `Tom de pele ${selectedTone}`;
+            toneDisplay.style.backgroundColor = getToneColor(selectedTone);
+        } else {
+            toneDisplay.textContent = 'Nenhum tom selecionado.';
+        }
+
+        function getToneColor(tone) {
+            switch (tone) {
+                case '1': return '#ffdbac'; // Exemplo de cor para tom 1
+                case '2': return '#f2c094'; // Exemplo de cor para tom 2
+                case '3': return '#e5b781'; // Exemplo de cor para tom 3
+                case '4': return '#d39b6a'; // Exemplo de cor para tom 4
+                case '5': return '#b57348'; // Exemplo de cor para tom 5
+                default: return '#fff'; // Cor padrão
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+}
+.menu {
+    display: flex;
+    gap: 0px;
+    margin-left: 1000px;
+}
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.menu-item:hover {
+    color: #346038;
+}
+.name{
+    display: flex;
+    gap: 0px;
+}
+.site-name{
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+.search-box {
+    border-radius: 40px;
+    background-color: #cab47c;  
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-txt {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: #346038;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+}
+.search-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #cab47c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+}
+
+.Upload {
+    position: absolute; /* Mantém a posição fixa na tela */
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Permite que a div ocupe o espaço disponível */
+    text-align: center;
+    top: 38%; /* Ajusta a distância do topo da janela */
+    left: 48%; /* Centraliza horizontalmente */
+    transform: translate(-50%, 0); /* Centraliza verticalmente */
+    margin-bottom: 10px;
+    margin-right: 80px;
+} 
+.picture__image img {
+    max-width: 100%; /* Mantém a largura da imagem dentro do contêiner */
+    max-height: 200px; /* Define uma altura máxima para a imagem */
+    display: none; /* Esconde a imagem inicialmente */
+    margin-top: 10px; /* Espaçamento acima da imagem */
+}
+
+.picture {
+    aspect-ratio: 16/9;
+    width: 400px;
+    background: rgba(100, 84, 72, 0.3);
+    display: flex;
+    border-radius: 20px;
+    color:#333;
+    cursor: pointer;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#uploaded-image {
+    max-width: 100%; /* Ajusta a largura máxima para 100% do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.enviar {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    width: 100%; /* Para ocupar toda a largura disponível */
+    margin-top: -20px;
+}
+
+.envio-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #346038;
+    color: #cab47c;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    height: 40px;
+    width: 150px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 90px;
+}
+
+.envio-btn:hover {
+    background-color: #28502f; /* Muda a cor ao passar o mouse */
+}
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Posiciona o rodapé no final do contêiner pai */
+    bottom: 0; /* Alinha ao fundo do contêiner pai */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.tutorial{
+    padding: 20px;
+    min-height: 100vh; 
+   
+}
+.tutorial h2{
+    color: #181B18;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: Roboto;
+    font-weight: 10px;
+    margin-left: 70px;
+}
+.tutorial h3{
+    color: #181B18;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-family: Roboto;
+    margin-left: 80px ;
+}
+.tutorial p {
+    font-size: 17px;
+    line-height: 20px;
+    word-spacing: 3px;
+    text-align: justify;
+    font-family: Rosarivo;
+}
+.box-tutorial {
+    background: rgba(255, 255, 255, 0.3); /* Cor cinza com 50% de opacidade */
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    margin-left: 60px;
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-top: 60px;
+    padding-right: 35px;
+}

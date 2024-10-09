@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Enviada</title>
+    <link rel="stylesheet" href="pg4.css"> <!-- Vincula o arquivo CSS -->
+</head>
+<body>
+    <header>
+        <div class="name">
+            <a href="index.html" class="site-name">Oblivion</a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="menu-item">Início</a>
+        </div>
+    </header>
+    <div class="passos">
+        <h1>2° Passo- Vamos identificar sua cor.</h1>
+        <h2>Araste e escolha a cor que mais
+            combina com a sua
+        </h2>
+        
+    </div>
+    <div class="imagem-enviada">
+        <img id="display-image" alt="Imagem Enviada">
+    </div>
+
+    <!-- Tabela de Tons de Pele -->
+    <div class="skin-tone-container">
+        <div class="skin-tone-table">
+            <div class="skin-tone-row skin-tone-1" data-tone="1"></div>
+            <div class="skin-tone-row skin-tone-2" data-tone="2"></div>
+            <div class="skin-tone-row skin-tone-3" data-tone="3"></div>
+            <div class="skin-tone-row skin-tone-4" data-tone="4"></div>
+            <div class="skin-tone-row skin-tone-5" data-tone="5"></div>
+        </div>
+    </div>
+
+    <div class="enviar">
+        <a href="pagina5.html" class="envio-btn" id="send-btn">Enviar</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Oblivion-Contato</p>
+            <p>e-mail: oblivion@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        const savedImage = localStorage.getItem('uploadedImage');
+        if (savedImage) {
+            document.getElementById('display-image').src = savedImage;
+        } else {
+            alert('Nenhuma imagem foi carregada.');
+        }
+
+        const rows = document.querySelectorAll('.skin-tone-row');
+        let selectedTone = null;
+
+        rows.forEach(row => {
+            row.addEventListener('click', function() {
+                rows.forEach(r => r.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedTone = this.getAttribute('data-tone');
+                console.log('Tom de pele selecionado:', selectedTone);
+            });
+        });
+
+        document.getElementById('send-tone').addEventListener('click', function() {
+            if (selectedTone) {
+                localStorage.setItem('selectedTone', selectedTone);
+                window.location.href = 'proxima-pagina.html'; // Redireciona para a próxima página
+            } else {
+                alert('Por favor, selecione um tom de pele antes de enviar.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleve sua maquiagem</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+    <header>
+        <div class="name">
+            <a href="index.html" class="site-name">Oblivion</a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="menu-item">Início</a>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Pesquisar">
+            <a href="#" class="search-btn">
+                <img src="loupe.png" alt="lupa" height="20" width="20">
+            </a>
+        </div>
+    </header>
+    
+    <div class="tutorial">
+        <h2>1° Passo - Envie sua foto.</h2>
+        <h3>Siga as instruções de envio<br> melhores resultados:</h3>
+        <section class="box-tutorial">
+            <p>- Busque um fundo branco (paredes, cortinas, etc).</p>
+            <p>- Atente-se também na cor de sua roupa, cores vibrantes ou fortes podem refletir em seu rosto, então use cores neutras, de preferência branco.</p>
+            <p>- Garanta que seu rosto está limpo, se algum produto tiver sido aplicado pode interferir na identificação.</p>
+            <p>- Tome cuidado com a iluminação, vá a um ambiente bem iluminado, fique a favor da luz (de frente para ela). E tente achar luz natural, pois luzes muito frias ou quentes também podem interferir.</p>
+        </section>
+    </div>
+
+    <div class="Upload">
+        <label class="picture" tabindex="0" for="picture__input">
+            <input type="file" id="picture__input" accept="image/*" class="picture__input" style="display: none;">
+            <span class="picture__image">
+                <img id="uploaded-image" src="" alt="Imagem Selecionada" style="display: none;">
+                <br>
+                Arraste ou selecione sua foto
+            </span>
+        </label>
+    </div>
+
+    <div class="enviar">
+        <a href="exibir.html" class="envio-btn" id="send-btn">Enviar</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Oblivion-Contato</p>
+            <p>e-mail: oblivion@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Obtém o elemento de entrada de arquivo e a imagem a ser exibida
+        const input = document.getElementById('picture__input');
+        const uploadedImage = document.getElementById('uploaded-image');
+        const sendButton = document.getElementById('send-btn');
+
+        // Armazena a imagem carregada no localStorage
+        input.addEventListener('change', function() {
+            const file = this.files[0]; // Pega o primeiro arquivo
+
+            if (file) {
+                const reader = new FileReader(); // Cria um novo FileReader
+                reader.readAsDataURL(file); // Lê o arquivo como URL de dados
+
+                // Quando o carregamento do arquivo for concluído
+                reader.onload = function() {
+                    uploadedImage.src = this.result; // Define a fonte da imagem como o resultado
+                    uploadedImage.style.display = 'block'; // Mostra a imagem
+
+                    // Armazena a imagem no localStorage
+                    localStorage.setItem('uploadedImage', this.result);
+                }
+            }
+        });
+
+        // Adiciona um ouvinte de evento para o botão de envio
+        sendButton.addEventListener('click', function() {
+            if (!localStorage.getItem('uploadedImage')) {
+                alert('Por favor, envie uma imagem antes de continuar.');
+            }
+        });
+    </script>
+</body>
+</html>

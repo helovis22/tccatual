@@ -1,0 +1,160 @@
+/* Garante que o HTML e o BODY ocupem toda a altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz o corpo da página crescer para ocupar o espaço disponível */
+body {
+    flex: 1;
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    width: 100vw;
+}
+
+/* Seu estilo para o header e outras seções permanecem os mesmos */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+}
+
+.menu {
+    display: flex;
+    gap: 0px;
+    margin-left: 1000px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #346038;
+}
+
+.name {
+    display: flex;
+}
+
+.site-name {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+.passos h1{
+    font-family: Roboto;
+    color: #181B18;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+.passos h2{
+    font-family: Roboto;
+    color: #0000;
+}
+#uploaded-image, #display-image {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+    transform: translate(0, 180px);
+    margin-left: 200px;
+}
+
+/* Container para a tabela de tons de pele */
+.skin-tone-container {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Define o estilo da tabela de tons de pele e a rolagem */
+.skin-tone-table {
+    max-height: 200px;
+    overflow-y: auto; /* Habilita rolagem vertical */
+    border: 1px solid #ccc; /* Borda da tabela */
+}
+
+/* Cada linha da tabela de tons de pele */
+.skin-tone-row {
+    height: 50px;
+    cursor: pointer; /* Faz com que o cursor mude para indicar que é clicável */
+}
+
+/* Diferentes tons de pele */
+.skin-tone-1 {
+    background-color: #8d5524; /* Cor de pele mais escura */
+}
+
+.skin-tone-2 {
+    background-color: #c68642;
+}
+
+.skin-tone-3 {
+    background-color: #e0ac69;
+}
+
+.skin-tone-4 {
+    background-color: #f1c27d;
+}
+
+.skin-tone-5 {
+    background-color: #ffdbac; /* Cor de pele mais clara */
+}
+
+/* Define o estilo para o tom de pele selecionado */
+.selected {
+    outline: 3px solid #346038; /* Adiciona contorno ao tom selecionado */
+}
+.enviar {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    width: 100%; /* Para ocupar toda a largura disponível */
+    margin-top: -20px;
+}
+
+.envio-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #346038;
+    color: #cab47c;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    height: 20px;
+    width: 100px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 90px;
+}
+.envio-btn:hover {
+    background-color: #28502f; /* Muda a cor ao passar o mouse */
+}
+/* Estilos do rodapé */
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Empurra o rodapé para o final */
+    flex-shrink: 0; /* Garante que o footer não encolha */
+}
+
+.footer-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+
